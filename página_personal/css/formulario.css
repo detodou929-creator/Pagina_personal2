@@ -1,0 +1,111 @@
+fieldset {
+    border: 1px solid #035fd8;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: #f8fafc;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+legend { /*titulos de los fieldset*/
+    font-weight: 600;
+    color: var(--color-blanco);
+    background: var(--color-secundario);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    letter-spacing: 0.3px;
+}
+
+form p { /*enviar y limpiar formulario*/
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: var(--color-texto);
+    font-size: 0.92rem;
+}
+
+/*selector múltiple agrupado por atributos.*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="time"],
+input[type="search"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #9aee3b;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: var(--color-blanco);
+    box-sizing: border-box; /*calcula tamaño de las cajas*/
+    transition: all 0.25s ease-in-out;
+}
+
+/* Foco brillante al dar clic en un campo */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 4px rgba(212, 13, 13, 0.15);
+}
+
+/* Estilos para rango y selectores especiales */
+input[type="color"] {
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    width: 60px;
+    height: 38px;
+    cursor: pointer;
+    background: var(--color-blanco);
+}
+
+input[type="range"] {
+    accent-color: var(--color-primario); /* Cambia el color del control deslizante */
+    width: 100%;
+}
+
+/* Botones principales */
+input[type="submit"],
+input[type="reset"] {
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: var(--sombra-suave);
+}
+
+input[type="submit"] {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-primario-oscuro); /**/
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-elevada);
+}
+
+input[type="reset"] {
+    background-color: #ef4444;
+    color: var(--color-blanco);
+}
+
+input[type="reset"]:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variables globales de diseño */
+:root {
+    --fuente-principal: 'Poppins', system-ui, -apple-system, sans-serif;
+    --color-primario: #2563eb;       /* Azul moderno */
+    --color-primario-oscuro: #1d4ed8;
+    --color-secundario: #0f172a;     /* Azul/Gris oscuro */
+    --color-acento: #10b981;         /* Verde esmeralda */
+    --color-texto: #334155;          /* Gris texto principal */
+    --color-texto-suave: #64748b;    /* Gris texto secundario */
+    --color-fondo: #f8fafc;
+    --color-blanco: #ffffff;
+    --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --sombra-elevada: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    font-size: 16px;
+    line-height: 1.7;
+    background-color: var(--color-fondo);
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 700; /* gorda-delgada */
+    color: var(--color-secundario);
+    letter-spacing: -0.5px; 
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+    position: relative; /* ancla */
+    padding-bottom: 8px;
+}
+
+/* Linea debajo de H2 .- elemento fantasma*/ 
+h2::after {
+    content: '';
+    position: absolute; /* elemento flotante */
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primario-oscuro);
+    margin-top: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--color-texto-suave);
+}
+
+a {
+    color: var(--color-primario);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-primario-oscuro);
+    text-decoration: underline;
+}
